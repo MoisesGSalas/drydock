@@ -58,7 +58,7 @@ version_variables = [
 ]
 
 [tool.semantic_release.branches.main]
-match = "(main|master)"
+match = "(main|master|release/*)"
 
 [tool.semantic_release.changelog.environment]
 keep_trailing_newline = true
