@@ -1,4 +1,5 @@
 .DEFAULT_GOAL := help
+NEXT ?=
 
 release: ## release a new version
 	@echo "Releasing a new version."
@@ -9,7 +10,7 @@ local-release:
 	@echo "Releasing a new version."
 	@echo "This is a local release, it will not push to the remote repository."
 	@echo "You can push the changes and release manually."
-	semantic-release version --changelog --commit --no-push
+	semantic-release version  $(NEXT) --changelog --no-tag --no-commit --no-push
 
 selfcheck: ## check that the Makefile is well-formed
 	@echo "The Makefile is well-formed."
